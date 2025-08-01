@@ -29,34 +29,34 @@
 - Async loading of non-critical CSS to prevent render blocking
 - Preload fonts and critical resources for faster loading
 
-## Структура папок
+## Project Structure
 
 ```
 fr/
 ├── src/
-│   ├── components/     # Nunjucks-компоненты (hero, integrations,featured-work, ... )
-│   ├── layouts/        # Лэйаут (layout.njk)
-│   ├── pages/          # Страницы (index.njk)
-│   ├── styles/         # SASS/SCSS-файлы
-│   └── scripts/        # JS-файлы (в main.js импортированы все модули)
-├── public/             # Скомпилированный код (HTML, CSS, JS)
+│   ├── components/     # Nunjucks components (hero, integrations, featured-work, etc.)
+│   ├── layouts/        # Layout (layout.njk)
+│   ├── pages/          # Pages (index.njk)
+│   ├── styles/         # SASS/SCSS files
+│   └── scripts/        # JS files (all modules imported in main.js)
+├── public/             # Compiled code (HTML, CSS, JS)
 ```
 
-## Сборка и запуск
+## Build and Run
 
-- `npm run start` — запуск dev-сервера с hot reload (http://localhost:3000)
-- `npm run build` — production-сборка в папку public
+- `npm run start` — start dev server with hot reload (http://localhost:3000)
+- `npm run build` — production build to public folder
 
-## Как устроены компоненты
+## How Components Work
 
-- Каждый крупный блок — отдельный файл в `src/components/` (например, `header.njk`, `hero.njk` и т.д.)
-- Главная страница (`src/pages/index.njk`) собирает их через `{% include %}`.
-- Чтобы поменять порядок блоков, просто поменяйте порядок include в `index.njk`.
+- Each major block is a separate file in `src/components/` (e.g., `header.njk`, `hero.njk`, etc.)
+- Main page (`src/pages/index.njk`) assembles them via `{% include %}`.
+- To change the order of blocks, simply change the include order in `index.njk`.
 
-## Использование AI-инструментов
+## AI Tools Usage
 
-- Для ускорения работы использовались Cursor AI и Copilot (AI autocomplete).
-- Cursor AI использовался для быстрого поиска релевантных файлов, эффективного дебага ошибок, автоматизации рутинных задач.
-- Проверял с помощью Cursor AI не забыл ли применить css-переменные везде, где необходимо.
-- Cursor AI выявлял нарушения политики безопасности контента (рекомендовал правильную конфигурацию CSP).
-- AI autocomplete (Cursor AI и Github Copilot) использовался для ускорения написания шаблонных данных.
+- Cursor AI and Copilot (AI autocomplete) were used to speed up development.
+- Cursor AI was used for quick file search, efficient error debugging, and automation of routine tasks.
+- Verified with Cursor AI that CSS variables were applied everywhere necessary.
+- Cursor AI identified content security policy violations (recommended proper CSP configuration).
+- AI autocomplete (Cursor AI and Github Copilot) was used to speed up writing template data.
