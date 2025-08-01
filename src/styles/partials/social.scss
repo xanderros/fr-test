@@ -1,0 +1,39 @@
+﻿@use "../helpers/media";
+
+.social {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 4px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+
+  @include media.sm {
+    gap: 4px;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    color: var(--font-color-base);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: color var(--transition-default),
+      border-color var(--transition-default),
+      background-color var(--transition-default);
+
+    &:hover {
+      color: var(--black);
+      border-color: var(--white);
+      background-color: var(--white);
+    }
+  }
+}

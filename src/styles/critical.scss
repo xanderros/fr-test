@@ -1,0 +1,12 @@
+﻿// Critical CSS for above-the-fold content
+@use "reset";
+@use "fonts";
+@use "helpers/media";
+@use "helpers/variables";
+
+// Import critical component styles
+@use "main";
+@use "partials/header";
+@use "partials/hero";
+@use "partials/social";
+@use "ui/buttons";

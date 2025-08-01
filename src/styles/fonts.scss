@@ -1,0 +1,16 @@
+// local fonts
+@mixin font-face($family, $weight, $name) {
+  @font-face {
+    font-display: swap;
+    font-family: $family;
+    font-style: normal;
+    font-weight: $weight;
+    src: url("../fonts/" + $name + ".woff2") format("woff2");
+  }
+}
+
+// Inter Display font faces
+@include font-face("Inter Display", 400, InterDisplay-Regular);
+@include font-face("Inter Display", 500, InterDisplay-Medium);
+@include font-face("Inter Display", 600, InterDisplay-SemiBold);
+@include font-face("Inter Display", 700, InterDisplay-Bold);

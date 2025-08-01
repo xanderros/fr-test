@@ -1,0 +1,167 @@
+﻿@use "../helpers/media";
+
+.hero {
+  display: flex;
+  position: relative;
+  min-height: 100svh;
+  padding-top: 130px;
+  padding-bottom: 36px;
+
+  @include media.xl {
+    padding-top: 120px;
+    padding-bottom: 28px;
+  }
+  @include media.lg {
+    padding-top: 102px;
+  }
+  @include media.xs {
+    padding-bottom: 23px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 65%, #000 100%);
+  }
+
+  &__bg-img {
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
+  &__container {
+    flex: 1;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: calc(50% - 40px) 1fr auto;
+    align-items: center;
+    row-gap: 50px;
+    column-gap: 40px;
+    min-height: max-content;
+    z-index: 1;
+
+    @include media.xl {
+      column-gap: 30px;
+    }
+    @include media.lg {
+      grid-template-areas:
+        "lt lt"
+        "content content"
+        "info info"
+        "lb lb"
+        "awards social";
+      grid-template-rows: 1fr auto auto 1fr auto;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 25px;
+      column-gap: 0;
+    }
+    @include media.sm {
+      row-gap: 16px;
+    }
+    @include media.xs {
+      row-gap: 14px;
+    }
+  }
+  &__content {
+    flex: 1;
+    padding-left: 8.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: span 3;
+
+    @include media.lg {
+      grid-area: content;
+      align-self: end;
+    }
+    @include media.sm {
+      padding-left: 0;
+    }
+  }
+  &__title {
+    font-size: 88px;
+    font-weight: 600;
+    line-height: 0.94;
+    letter-spacing: -0.02em;
+
+    @include media.xl {
+      font-size: 70px;
+    }
+    @include media.lg {
+      font-size: 60px;
+    }
+    @include media.md {
+      font-size: 50px;
+    }
+    @include media.sm {
+      font-size: 38px;
+    }
+    @include media.xs {
+      font-size: 34px;
+    }
+  }
+  &__title-accent {
+    color: var(--primary-color);
+    display: block;
+  }
+  &__awards {
+    @include media.lg {
+      grid-area: awards;
+      align-self: end;
+    }
+  }
+  &__award {
+    display: inline-block;
+  }
+  &__info {
+    @include media.lg {
+      padding-left: 8.5%;
+      grid-area: info;
+      align-self: start;
+    }
+    @include media.sm {
+      padding-left: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+  &__text {
+    margin-right: auto;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 500;
+    max-width: 325px;
+    text-wrap: balance;
+
+    @include media.xxxl {
+      font-size: 16px;
+    }
+    @include media.lg {
+      font-size: 18px;
+    }
+    @include media.sm {
+      font-size: 14px;
+    }
+    @include media.xs {
+      font-size: 13px;
+    }
+  }
+  &__social {
+    align-self: end;
+
+    @include media.lg {
+      grid-area: social;
+      justify-self: end;
+    }
+  }
+}

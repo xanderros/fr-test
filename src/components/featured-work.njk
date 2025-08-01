@@ -1,0 +1,66 @@
+<section class="section featured-work">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="title">Featured Work</h2>
+    </div>
+    <div class="works js-accordion" role="region" aria-label="Featured work projects">
+      {% set works = [
+      {
+        name: "NotSoApe",
+        tag: "CMS",
+        industry: "IT Services & Consulting",
+        stack: ["Storyblok", "Next.JS", "Vercel"],
+        scope: ["Design", "Website development", "Maintenance"],
+        image: "https://cdn.sanity.io/images/vftxng62/production/4c19c67567812c41784d558627d7ff020b632b3f-1920x1200.png?auto=format",
+        link: "https://google.com"
+      },
+      {
+        name: "EasyPark",
+        tag: "Headless CMS",
+        industry: "Parking & Mobility",
+        stack: ["Storyblok", "NextJS", "Vercel"],
+        scope: ["Design", "Website development", "Maintenance"],
+        image: "https://cdn.sanity.io/images/vftxng62/production/0e4275cc0d353bc672901b3d4e7f3ce23a56dc69-1920x1200.png?auto=format",
+        link: "https://google.com"
+      },
+      {
+        name: "QuantHealth",
+        tag: "CMS",
+        industry: "Biotechnology Research",
+        stack: ["DatoCMS", "NextJS", "Vercel"],
+        scope: ["Website development", "Maintenance"],
+        image: "https://cdn.sanity.io/images/vftxng62/production/134625de2bb58476fdcd75891fe3b82e694895fd-1920x1200.png?auto=format",
+        link: "https://google.com"
+      },
+      {
+        name: "Reverse Health",
+        tag: "CMS",
+        industry: "Health, Wellness & Fitness",
+        stack: ["Payload CMS", "NextJS", "PostgreSQL"],
+        scope: ["Software development"],
+        image: "https://cdn.sanity.io/images/vftxng62/production/4c19c67567812c41784d558627d7ff020b632b3f-1920x1200.png?auto=format",
+        link: "https://google.com"
+      },
+      {
+        name: "Caleffi",
+        tag: "eCommerce",
+        industry: "Textile Manufacturing",
+        stack: ["Sanity", "Shopify Hydrogen", "Remix"],
+        scope: ["Migration from Magento", "Webshop development", "Maintenance"],
+        image: "https://cdn.sanity.io/images/vftxng62/production/4f3a5a104f24aebc6e29743621b63f496a1165fa-1920x1200.png?auto=format",
+        link: "https://google.com"
+      }
+    ]%}
+      {% for work in works %}
+        {% set name = work.name %}
+        {% set tag = work.tag %}
+        {% set industry = work.industry %}
+        {% set stack = work.stack %}
+        {% set scope = work.scope %}
+        {% set image = work.image %}
+        {% set link = work.link %}
+        {% include "work-item.njk"%}
+      {% endfor %}
+    </div>
+    <span class="custom-cursor">View Case</span>
+  </section>

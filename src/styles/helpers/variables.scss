@@ -1,0 +1,88 @@
+﻿@use "media";
+
+:root {
+  /* Colors */
+  --black: #000;
+  --white: #fff;
+  --grey-light: #727272;
+  --grey: #2c2c2c;
+  --grey-dark: #171717;
+
+  --green: #00e56d;
+  --green-dark: #00b85c;
+
+  --primary-color: var(--green);
+  --primary-color-dark: var(--green-dark);
+
+  /* Fonts */
+  --font-family-base: "Inter Display", Arial, sans-serif;
+  --font-color-base: var(--white);
+
+  /* Borders */
+  --border-color: var(--grey);
+  --border-color-dark: var(--grey-dark);
+
+  /* Backgrounds */
+  --background-color: var(--black);
+  --background-color-glass: rgba(255, 255, 255, 0.16);
+
+  /* Sizes */
+  --container-min-width: 320px;
+  --container-max-width: 1920px;
+  --container-padding-x: 40px;
+  --header-height: 108px;
+
+  --works-image-width: 1100px;
+  --works-item-height: 500px;
+  --works-header-height: 96px;
+
+  // Sizes - Integration Card
+  --card-size: 240px;
+  --card-padding-top: 90px;
+  --card-shift: 64px;
+
+  /* Transitions */
+  --transition-default: 0.25s ease-out;
+  --transition-nav: 0.3s ease-out;
+  --transition-accordion: 0.2s linear;
+  --transition-cursor: 0.1s ease-out;
+
+  /* Media */
+  @include media.xxxl {
+    --works-image-width: 900px;
+    --works-item-height: 400px;
+  }
+  @include media.xxl {
+    --works-image-width: 760px;
+  }
+  @include media.xl {
+    --header-height: 88px;
+    --container-padding-x: 24px;
+    --works-image-width: 600px;
+    --works-item-height: 300px;
+  }
+  @include media.tablet-or-narrow {
+    --card-size: 150px;
+    --card-padding-top: 70px;
+    --card-shift: 35px;
+  }
+  @include media.lg {
+    --works-image-width: 400px;
+    --works-item-height: 200px;
+    --works-header-height: 68px;
+  }
+  @include media.md {
+    --works-image-width: auto;
+    --works-item-height: auto;
+    --works-header-height: auto;
+    --card-size: 94px;
+    --card-padding-top: 60px;
+    --card-shift: 20px;
+  }
+  @include media.xs {
+    --container-padding-x: 16px;
+    --card-size: 86px;
+    --card-padding-top: 50px;
+    --card-shift: 18px;
+  }
+}

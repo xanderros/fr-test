@@ -1,0 +1,41 @@
+<div class="works__item js-accordion__item">
+  <div class="works__header js-accordion__header">
+    <h3 class="works__name">{{ name }}</h3>
+    <div class="works__tags">
+      <span class="works__tag">{{ tag }}</span>
+    </div>
+  </div>
+  <div class="works__content js-accordion__content">
+    <a href="{{ link }}" class="works__link"><span>{{ name }}</span></a>
+    <div class="works__details">
+      <div class="works__detail">
+        <div class="works__detail-title">Industry</div>
+        <div class="works__detail-value">{{ industry }}</div>
+      </div>
+      <div class="works__detail">
+        <div class="works__detail-title">Technical Stack</div>
+        <div class="works__detail-value">
+          {% for item in stack %}
+            <div class="works__detail-value">{{ item }}</div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="works__detail">
+        <div class="works__detail-title">Scope of Work</div>
+        <div class="works__detail-value">
+          {% for item in scope %}
+            <div class="works__detail-value">{{ item }}</div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="works__figure">
+      <img
+        class="works__img"
+        src="{{ image }}"
+        alt="{{ name }}"
+        loading="lazy"
+/>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@use "../helpers/media";
+
+.title {
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+
+  @include media.xxl {
+    font-size: 84px;
+  }
+  @include media.xl {
+    font-size: 68px;
+  }
+  @include media.lg {
+    font-size: 56px;
+  }
+  @include media.md {
+    font-size: 48px;
+  }
+  @include media.xs {
+    font-size: 36px;
+  }
+}

@@ -1,0 +1,39 @@
+<section class="integrations">
+  <div class="integrations__container container">
+    <div class="integrations__top">
+      <h2 class="integrations__title integrations__title_bottom">
+        <span class="integrations__title-part">
+          <span class="integrations__title-word">Ship</span></span
+        >
+        <span class="integrations__title-part">
+          <span class="integrations__title-word">Everywhere</span>
+        </span>
+      </h2>
+      <div class="integrations__cards">
+        {% set cards = [ { icon: "crm", label: "CRM", iconFlip: 'ecommerce',
+        labelFlip: 'Ecommerce' }, { icon: "analytics", label: "Analytics",
+        iconFlip: 'applications', labelFlip: 'Applications' }, { icon:
+        "database", label: "Database", iconFlip: 'multi-tenant', labelFlip:
+        'Multi-Tenant' } ]%}
+        {% for card in cards %}
+          {% set icon = card.icon %}
+          {% set label = card.label %}
+          {% set iconFlip = card.iconFlip %}
+          {% set
+          labelFlip = card.labelFlip %}
+          {% include "card.njk"%}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="integrations__bottom">
+      <h2 class="integrations__title integrations__title_top">
+        <span class="integrations__title-part">
+          <span class="integrations__title-word">Integrate</span>
+        </span>
+        <span class="integrations__title-part">
+          <span class="integrations__title-word">Anything</span>
+        </span>
+      </h2>
+    </div>
+  </div>
+</section>

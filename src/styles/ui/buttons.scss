@@ -1,0 +1,17 @@
+﻿.btn {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 999px;
+  background-color: var(--primary-color);
+  color: var(--black);
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 24px;
+  transition: background-color var(--transition-default);
+
+  &:hover {
+    background-color: var(--primary-color-dark);
+  }
+}
