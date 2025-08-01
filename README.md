@@ -1,4 +1,4 @@
-# Проект: Тестовое задание
+# Project: Test Website
 
 ## A brief explanation of the code and design choices made
 
