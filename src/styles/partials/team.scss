@@ -1,0 +1,82 @@
+﻿// task 2
+.grid {
+  display: grid;
+
+  &:has(.grid__item:first-child:nth-last-child(2)) {
+    background-color: aquamarine;
+  }
+
+  &__item {
+    background-color: antiquewhite;
+  }
+  &__btn {
+    flex-grow: 1;
+    background-color: aqua;
+  }
+}
+
+// task 1
+.swiper {
+  &.mySwiper {
+    height: 560px;
+
+    .swiper-slide,
+    .swiper-slide-duplicate {
+      width: var(--team-slide-width);
+      height: 400px;
+    }
+    .swiper-slide-active,
+    .swiper-slide-duplicate-active {
+      width: var(--team-active-slide-width);
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      margin-top: 0;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: var(--grey-dark);
+      border: 1px solid var(--grey);
+      top: auto;
+      left: auto;
+      bottom: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+    .swiper-button-next {
+      transform: scaleX(-1);
+    }
+    .mySwiper {
+      &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      &__controls {
+        margin-top: -160px;
+        position: relative;
+        display: flex;
+        height: 160px;
+        width: 100vw;
+      }
+      &__controls-item {
+        position: relative;
+        width: 50%;
+
+        &_left {
+          .swiper-button-prev {
+            right: 40px;
+          }
+        }
+        &_right {
+          .swiper-button-next {
+            left: calc(var(--team-active-slide-width) + 40px);
+          }
+        }
+      }
+    }
+  }
+}

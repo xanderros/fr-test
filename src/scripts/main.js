@@ -5,4 +5,5 @@ document.addEventListener("DOMContentLoaded", () => {
   import("./sticky-header.js");
   import("./accordion.js");
   import("./custom-cursor.js");
+  import("./slider.js");
 });

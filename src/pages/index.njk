@@ -1,9 +1,12 @@
 {% extends "../layouts/layout.njk" %}
-
 {% block title %}FR Test - Alexander Kuleshov{% endblock %}
-
 {% block content %}
-  {% include "hero.njk" %}
-  {% include "integrations.njk" %}
-  {% include "featured-work.njk" %}
+    {% include "hero.njk" %}
+    {% include "integrations.njk" %}
+    {% include "featured-work.njk" %}
+    {% include "team.njk" %}
+{% endblock %}
+{% block scripts %}
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 {% endblock %}

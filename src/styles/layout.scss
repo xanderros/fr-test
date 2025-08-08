@@ -1,0 +1,78 @@
+﻿@use "helpers/media";
+
+// Main styles
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  font-weight: normal;
+  font-kerning: normal;
+}
+
+body {
+  font-family: var(--font-family-base);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: var(--font-color-base);
+}
+
+.wrapper {
+  background-color: var(--background-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-width: var(--container-min-width);
+  max-width: var(--container-max-width);
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
+}
+
+.section {
+  padding: 80px 0 40px;
+
+  @include media.lg {
+    padding: 60px 0 30px;
+  }
+
+  &__header {
+    margin-bottom: 50px;
+
+    @include media.lg {
+      margin-bottom: 32px;
+    }
+    @include media.md {
+      margin-bottom: 14px;
+    }
+  }
+  &__grid {
+    display: flex;
+    align-items: flex-end;
+
+    @include media.md {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+  &__grid-cell {
+    width: 50%;
+
+    @include media.md {
+      width: 100%;
+    }
+  }
+}
+
+.footer {
+  margin-top: auto;
+}

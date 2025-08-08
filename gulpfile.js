@@ -15,12 +15,14 @@ const path = require("path");
 // Paths
 const paths = {
   styles: {
-    src: "src/styles/**/*.scss",
+    src: "src/styles/main.scss",
+    watch: "src/styles/**/*.scss",
     critical: "src/styles/critical.scss",
     dest: "public/css",
   },
   scripts: {
-    src: "src/scripts/**/*.js",
+    src: "src/scripts/main.js",
+    watch: "src/scripts/**/*.js",
     dest: "public/js",
   },
   templates: {
@@ -172,8 +174,11 @@ function serve() {
   });
 
   // Watch files
-  gulp.watch(paths.styles.src, gulp.series(criticalCSS, inlineCriticalCSS));
-  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(
+    paths.styles.watch,
+    gulp.series(styles, criticalCSS, inlineCriticalCSS)
+  );
+  gulp.watch(paths.scripts.watch, scripts);
   gulp.watch(paths.templates.watch, inlineCriticalCSS);
   gulp.watch(paths.images.src, images);
 }

@@ -1,0 +1,94 @@
+﻿<section class="section team">
+  <div class="container">
+    <div class="section__header">
+      <div class="section__grid">
+        <div class="section__grid-cell">
+          <h2 class="title">Our Team</h2>
+        </div>
+        <div class="section__grid-cell">
+          Meet Our Experts.
+          <br/>
+          See the faces behind the company
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% set team = [
+    {
+      name: "Denis Radin",
+      position: "Tech Lead / Principal Developer / Founder",
+      image: 'img/team_01.png'
+    }, {
+      name: "John Doe",
+      position: "Senior Developer",
+      image: 'https://placehold.co/267x400'
+    }, {
+      name: "Jane Smith",
+      position: "Project Manager",
+      image: 'https://placehold.co/267x400'
+    }, {
+      name: "Denis RadinAlice Johnson",
+      position: "UI/UX Designer",
+      image: 'https://placehold.co/267x400'
+    }, {
+      name: "Bob Brown",
+      position: "Marketing Specialist",
+      image: 'https://placehold.co/267x400'
+    }, {
+      name: "Charlie White",
+      position: "Data Analyst",
+      image: 'https://placehold.co/267x400'
+    }, {
+      name: "Eve Davis",
+      position: "Software Engineer",
+      image: 'https://placehold.co/267x400'
+    }, {
+      name: "Frank Green",
+      position: "DevOps Engineer",
+      image: 'https://placehold.co/267x400'
+    }, {
+      name: "Grace Lee",
+      position: "Content Strategist",
+      image: 'https://placehold.co/267x400'
+    }, {
+      name: "Hank Wilson",
+      position: "QA Engineer",
+      image: 'https://placehold.co/267x400'
+    }, {
+      name: "Ivy Clark",
+      position: "Business Analyst",
+      image: 'https://placehold.co/267x400'
+    }, {
+      name: "Jack Taylor",
+      position: "Customer Support Specialist",
+      image: 'https://placehold.co/267x400'
+    }
+  ]
+ %}
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {% for person in team %}
+        <div class="swiper-slide">
+          <div class="mySwiper__slide">
+            <img class='mySwiper__image' src={{ person.image }} alt="{{ person.name }}"/>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="mySwiper__controls">
+      <div class="mySwiper__controls-item mySwiper__controls-item_left">
+        <div class="swiper-button-prev">
+          <img src="img/arrow.svg" alt="Previos" width="15" height="27"/>
+        </div>
+      </div>
+      <div class="mySwiper__controls-item mySwiper__controls-item_right">
+        <div class="swiper-button-next">
+          <img src="img/arrow.svg" alt="Next" width="15" height="27"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
